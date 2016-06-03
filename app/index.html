@@ -15,6 +15,9 @@
   <script src="js/services/SummaryFactory.js"></script>
   <script src="js/services/SummaryService.js"></script>
   <title>News Summary</title>
+  <style>
+    p:first-letter { font-size: 200%; font-family: "Edwardian Script ITC", "Brush Script MT", cursive; } 
+  </style>
 </head>
 
 <body>
@@ -23,17 +26,17 @@
     <div ng-repeat="article in controller.articles">
       <br>
       <h3> {{ article.webTitle }}</h3>
-      <p style="font-style: italic;"> {{article.pubDate | date:'medium'}} </p>
+      <span style="font-style: italic;"> {{article.pubDate | date:'medium'}} </span><hr>
       <div class="row">
         <div class="col-md-6"> 
-          <img ng-src="{{article.picture}}">
+          <img class="img-thumbnail" ng-src="{{article.picture}}">
         </div>
         <div class="col-md-6"> 
           <p style="text-align: justify;">{{ article.summary.join() }}</p>
         </div>
         <!-- <p ng-bind-html="article.content"></p> -->
       </div>
-      <hr>
+      <br>
     </div>
   </div>
 </body>
