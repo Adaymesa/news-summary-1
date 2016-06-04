@@ -2,13 +2,13 @@
   "name": "news-summary",
   "version": "0.1.0",
   "description": "Browse a summary of the news",
-  "postinstall": "./node_modules/bower/bin/bower install",
   "scripts": {
     "start-app": "cd app && ../node_modules/http-server/bin/http-server",
     "start-selenium": "./node_modules/protractor/bin/webdriver-manager start",
     "install-selenium-dependencies": "./node_modules/protractor/bin/webdriver-manager update",
     "test-features": "./node_modules/protractor/bin/protractor test/protractor.conf.js",
-    "test-units": "./node_modules/karma-cli/bin/karma start test/karma.conf.js"
+    "test-units": "./node_modules/karma-cli/bin/karma start test/karma.conf.js",
+    "postinstall": "bower install"
   },
   "author": "",
   "license": "MIT",
